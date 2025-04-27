@@ -22,6 +22,8 @@
             <div class="tab active" data-tab="ip-threats">IP Threats</div>
             <div class="tab" data-tab="traffic-analysis">Traffic Analysis</div>
             <div class="tab" data-tab="threat-map">Threat Map</div>
+            <div class="tab" data-tab="login-attempts">Login Attempts</div>
+            <div class="tab" data-tab="threat-distribution">Threat Distribution</div>
         </div>
 
         <div id="ip-threats" class="tab-content active">
@@ -107,8 +109,90 @@
                 </div>
             </div>
         </div>
+
+        <div id="login-attempts" class="tab-content">
+            <div class="dashboard-grid">
+                <div class="dashboard-column">
+                    <!-- Login Attempts List -->
+                    <div class="card">
+                        <h2>Login Attempts & Suspicious Behavior</h2>
+                        <table class="table" id="login-attempts-table">
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Username</th>
+                                    <th>IP Address</th>
+                                    <th>Behavior Type</th>
+                                    <th>Status</th>
+                                    <th>Anomaly Score</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Login attempts will be loaded here dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="dashboard-column">
+                    <!-- Login Attempt Details -->
+                    <div id="login-details" class="card login-details">
+                        <h2>Login Attempt Details</h2>
+                        <div id="login-details-content">
+                            <!-- Select a login attempt to view details -->
+                            <p class="select-message">Select a login attempt to view details</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="threat-distribution" class="tab-content">
+            <div class="dashboard-grid">
+                <div class="dashboard-column">
+                    <!-- Threat Types Distribution -->
+                    <div class="card">
+                        <h2>Threat Types Distribution</h2>
+                        <div class="chart-container">
+                            <canvas id="threatTypesChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Severity Distribution -->
+                    <div class="card">
+                        <h2>Threat Severity Distribution</h2>
+                        <div class="chart-container">
+                            <canvas id="severityChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-column">
+                    <!-- Traffic Protocol Distribution -->
+                    <div class="card">
+                        <h2>Traffic Protocol Distribution</h2>
+                        <div class="chart-container">
+                            <canvas id="protocolChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Action Taken Distribution -->
+                    <div class="card">
+                        <h2>Action Taken Distribution</h2>
+                        <div class="chart-container">
+                            <canvas id="actionChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+
+    <!-- Dashboard JavaScript -->
     <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
 </body>
 </html>

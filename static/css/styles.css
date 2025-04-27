@@ -110,8 +110,61 @@ h1, h2, h3 {
     border-bottom: none;
 }
 
-.threat-details {
+.threat-details, .login-details {
     margin-top: 20px;
+}
+
+/* Login attempts status badges */
+.status-badge.failed, .status-badge.blocked {
+    background-color: rgba(211, 47, 47, 0.2);
+    color: #ff5252;
+    border: 1px solid #ff5252;
+}
+
+.status-badge.successful {
+    background-color: rgba(67, 160, 71, 0.2);
+    color: #69f0ae;
+    border: 1px solid #69f0ae;
+}
+
+/* Anomaly score indicator */
+.anomaly-score {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background-color: #2a2a2a;
+}
+
+.anomaly-score-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.anomaly-score-text {
+    position: relative;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
+}
+
+.anomaly-score-fill.high {
+    background-color: #d32f2f;
+}
+
+.anomaly-score-fill.medium {
+    background-color: #f9a825;
+}
+
+.anomaly-score-fill.low {
+    background-color: #43a047;
 }
 
 /* Map styles */
@@ -229,4 +282,12 @@ h1, h2, h3 {
 
 .dark-popup strong {
     color: #ffffff;
+}
+
+/* Chart styles */
+.chart-container {
+    position: relative;
+    height: 300px;
+    margin: 10px 0;
+    padding: 10px;
 }
