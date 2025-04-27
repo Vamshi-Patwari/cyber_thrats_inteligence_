@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "timestamp": "2025-04-26T10:15:00",
+    "sourceIP": "192.168.1.100",
+    "destinationIP": "10.0.0.5",
+    "protocol": "TCP",
+    "port": 443,
+    "bytesTransferred": 1245,
+    "packetsTransferred": 8,
+    "duration": 2.5,
+    "status": "Blocked"
+  },
+  {
+    "id": "2",
+    "timestamp": "2025-04-26T10:12:00",
+    "sourceIP": "172.16.0.5",
+    "destinationIP": "10.0.0.10",
+    "protocol": "UDP",
+    "port": 53,
+    "bytesTransferred": 512,
+    "packetsTransferred": 4,
+    "duration": 1.2,
+    "status": "Flagged"
+  },
+  {
+    "id": "3",
+    "timestamp": "2025-04-26T10:10:00",
+    "sourceIP": "10.0.0.15",
+    "destinationIP": "10.0.0.1",
+    "protocol": "TCP",
+    "port": 80,
+    "bytesTransferred": 8192,
+    "packetsTransferred": 12,
+    "duration": 3.7,
+    "status": "Allowed"
+  },
+  {
+    "id": "4",
+    "timestamp": "2025-04-26T10:05:00",
+    "sourceIP": "192.168.1.5",
+    "destinationIP": "10.0.0.2",
+    "protocol": "TCP",
+    "port": 22,
+    "bytesTransferred": 4096,
+    "packetsTransferred": 16,
+    "duration": 5.1,
+    "status": "Allowed"
+  },
+  {
+    "id": "5",
+    "timestamp": "2025-04-26T10:01:00",
+    "sourceIP": "192.168.1.100",
+    "destinationIP": "10.0.0.5",
+    "protocol": "TCP",
+    "port": 3389,
+    "bytesTransferred": 2048,
+    "packetsTransferred": 6,
+    "duration": 1.8,
+    "status": "Blocked"
+  },
+  {
+    "id": "6",
+    "timestamp": "2025-04-26T09:58:00",
+    "sourceIP": "10.0.0.15",
+    "destinationIP": "172.16.0.1",
+    "protocol": "UDP",
+    "port": 123,
+    "bytesTransferred": 256,
+    "packetsTransferred": 2,
+    "duration": 0.5,
+    "status": "Allowed"
+  }
+]

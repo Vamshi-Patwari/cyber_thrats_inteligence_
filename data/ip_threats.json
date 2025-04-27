@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1",
+    "ipAddress": "192.168.1.100",
+    "type": "Malicious",
+    "severity": "High",
+    "lastSeen": "2025-04-26T10:15:00",
+    "count": 42,
+    "description": "This IP address has been observed attempting to exploit known vulnerabilities in web applications. Multiple failed login attempts and SQL injection attacks were detected.",
+    "source": "Internal Threat Intelligence",
+    "location": {
+      "lat": 37.7749,
+      "lng": -122.4194,
+      "country": "United States",
+      "city": "San Francisco"
+    }
+  },
+  {
+    "id": "2",
+    "ipAddress": "10.0.0.15",
+    "type": "Scanning",
+    "severity": "Medium",
+    "lastSeen": "2025-04-25T14:30:00",
+    "count": 18,
+    "description": "This IP has been detected performing port scanning activities across the network. The scanning pattern suggests reconnaissance for potential vulnerabilities.",
+    "source": "Network IDS",
+    "location": {
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "country": "United Kingdom",
+      "city": "London"
+    }
+  },
+  {
+    "id": "3",
+    "ipAddress": "172.16.0.5",
+    "type": "Suspicious",
+    "severity": "Low",
+    "lastSeen": "2025-04-24T09:45:00",
+    "count": 7,
+    "description": "This IP has exhibited unusual traffic patterns that deviate from baseline behavior. While not clearly malicious, the activity warrants monitoring.",
+    "source": "Behavioral Analysis",
+    "location": {
+      "lat": 35.6762,
+      "lng": 139.6503,
+      "country": "Japan",
+      "city": "Tokyo"
+    }
+  },
+  {
+    "id": "4",
+    "ipAddress": "203.0.113.42",
+    "type": "Malicious",
+    "severity": "High",
+    "lastSeen": "2025-04-26T08:30:00",
+    "count": 31,
+    "description": "This IP has been identified as part of a botnet network. It has been observed participating in distributed denial-of-service (DDoS) attacks.",
+    "source": "Threat Intelligence Feed",
+    "location": {
+      "lat": 55.7558,
+      "lng": 37.6173,
+      "country": "Russia",
+      "city": "Moscow"
+    }
+  },
+  {
+    "id": "5",
+    "ipAddress": "198.51.100.23",
+    "type": "Suspicious",
+    "severity": "Medium",
+    "lastSeen": "2025-04-25T16:45:00",
+    "count": 15,
+    "description": "This IP has been observed attempting to access sensitive resources without proper authorization. Multiple authentication failures recorded.",
+    "source": "Security Information and Event Management (SIEM)",
+    "location": {
+      "lat": 40.7128,
+      "lng": -74.006,
+      "country": "United States",
+      "city": "New York"
+    }
+  }
+]

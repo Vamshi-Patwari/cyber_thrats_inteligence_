@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Threats Intelligence Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <!-- Leaflet Map JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+</head>
+<body>
+    <div class="dashboard container">
+        <h1>Cyber Threats Intelligence Dashboard</h1>
+
+        <div class="tabs">
+            <div class="tab active" data-tab="ip-threats">IP Threats</div>
+            <div class="tab" data-tab="traffic-analysis">Traffic Analysis</div>
+            <div class="tab" data-tab="threat-map">Threat Map</div>
+        </div>
+
+        <div id="ip-threats" class="tab-content active">
+            <div class="dashboard-grid">
+                <div class="dashboard-column">
+                    <!-- IP Threats List -->
+                    <div class="card">
+                        <h2>IP Threats</h2>
+                        <table class="table" id="ip-threats-table">
+                            <thead>
+                                <tr>
+                                    <th>IP Address</th>
+                                    <th>Type</th>
+                                    <th>Severity</th>
+                                    <th>Last Seen</th>
+                                    <th>Count</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- IP threats will be loaded here dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="dashboard-column">
+                    <!-- IP Threat Details -->
+                    <div id="threat-details" class="card threat-details">
+                        <h2>IP Threat Details</h2>
+                        <div id="threat-details-content">
+                            <!-- Select a threat to view details -->
+                            <p class="select-message">Select a threat to view details</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="traffic-analysis" class="tab-content">
+            <div class="card">
+                <h2>Traffic Analysis</h2>
+                <table class="table" id="traffic-table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Source IP</th>
+                            <th>Destination IP</th>
+                            <th>Protocol</th>
+                            <th>Port</th>
+                            <th>Bytes</th>
+                            <th>Packets</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Traffic data will be loaded here dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="threat-map" class="tab-content">
+            <div class="card">
+                <h2>Threat Map</h2>
+                <div class="map-container">
+                    <div id="map"></div>
+                </div>
+                <div class="map-legend">
+                    <h3>Legend</h3>
+                    <div class="legend-item">
+                        <span class="legend-marker high"></span>
+                        <span>High Severity</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-marker medium"></span>
+                        <span>Medium Severity</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-marker low"></span>
+                        <span>Low Severity</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>
